@@ -1,7 +1,12 @@
-## Practical proramming in Java
+# homework-g696-feofanova
+*Homework-1 for java-2017: calculator.*
 
-[![Build Status](https://travis-ci.org/fediq/mipt-java-2016.svg?branch=master)](https://travis-ci.org/VeLKerr/mipt-java-2017)
+This calculator uses [shunting-yard](https://en.wikipedia.org/wiki/Shunting-yard_algorithm) algorithm.
 
-### Полезные ссылки
-1. [Google code style](https://google.github.io/styleguide/javaguide.html),
-2. [Интеграция Google code style c IntelliJ IDEA и Eclipse](https://github.com/HPI-Information-Systems/Metanome/wiki/Installing-the-google-styleguide-settings-in-intellij-and-eclipse).
+#### The structure:
+* **AbstractTokenCalculator** implements interface *Calculator* from base.
+This class realises expression parsing using StringTokenizer. Also it used interface *ExpressionHandler*, that calculate expressions.
+* **ExpressionHandler** is an interface, that must do smth with numbers and operators, and give the answer in the end.
+* **ShuntingYardHandler** implements *ExpressionHandler*. It's a specific implementation of handler, that using shunting-yard algorithm with 2 stacks: for numbers and for operators. We give for each operator the priority and calculate expressions in stacks when it possible.
+* **ShuntingYardTokenCalculator** extends *AbstractTokenCalculator*. It's a final class, that solves the task.
+* **ShuntingYardTokenCalculatorTest** extends *AbstractCalculatorTest*. Tests my calculator.
