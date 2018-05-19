@@ -1,4 +1,4 @@
-# homework-g696-feofanova
+# Java calculator
 *Homework-1 for java-2017: calculator.*
 
 This calculator uses [shunting-yard](https://en.wikipedia.org/wiki/Shunting-yard_algorithm) algorithm.
